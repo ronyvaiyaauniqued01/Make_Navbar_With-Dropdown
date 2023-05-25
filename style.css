@@ -12,6 +12,10 @@ body {
     background-position: center;
 }
 
+a {
+    transition: .3s all;
+}
+
 .container  {
     width: 1170px;
     margin: 0 auto;
@@ -25,7 +29,11 @@ ul {
 .header {
     padding: 20px 0;
     background-color: rgb(54, 54, 54);
+}
+
+.navbar{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
@@ -45,4 +53,50 @@ ul {
 
 .header .main_menu li {
     position: relative;
+}
+
+.header .main_menu li .sub_menu {
+    position:absolute;
+    width: 180px;
+    background-color: rgb(54, 54, 54);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: .3s all;
+}
+
+.header .main_menu li .sub_menu li a {
+    color:#fff;
+    font-size: 16px;
+    padding: 10px 20px;
+}
+
+.main_menu li:hover > a {
+    color: orange;
+}
+
+.main_menu li:hover .sub_menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sub_menu li:hover a {
+    background-color: orange;
+    color: #fff;
+}
+
+.common_btn a {
+    padding: 10px 30px;
+    border-radius: 40px;
+    font-family: 'Poppins' sans-serif;
+    font-size: 22px;
+    color: #fff;
+    border: 1px solid orange;
+    text-decoration: none;
+}
+
+.common_btn a:hover {
+    background-color: orange;
+    color: #fff;
 }
